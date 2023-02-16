@@ -22,6 +22,14 @@ export function Info({ info }) {
           <h3 className={styles.Heading}>Email</h3>
           <p className={styles.HeadingValue}>{info["email"]}</p>
         </>
+        <>
+          <h3 className={styles.Heading}>Address</h3>
+          <p className={styles.HeadingValue}>{info["address"]}</p>
+        </>
+        {/* <>
+          <h3 className={styles.Heading}>Public key</h3>
+          <p className={styles.HeadingValue}>{info["publicKey"]}</p>
+        </> */}
       </div>
     );
   }
