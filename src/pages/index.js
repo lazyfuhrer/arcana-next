@@ -1,12 +1,11 @@
-import React from "react";
+import { useEffect } from "react";
 import { useArcanaAuth } from "../../auth/useArcanaAuth";
 import Loader from "../components/loader";
 import { Info } from "../components/info";
 import styles from "./index.module.css";
 
 export default function IndexPage() {
-  const { user, connect, isLoggedIn, loading, loginWithSocial, provider } =
-    useArcanaAuth();
+  const { user, connect, isLoggedIn, loading, loginWithSocial, provider } = useArcanaAuth();
   const onConnectClick = async () => {
     try {
       await connect();
@@ -17,7 +16,7 @@ export default function IndexPage() {
   const onConnect = () => {
     console.log("connected");
   };
-  React.useEffect(() => {
+  useEffect(() => {
     provider.on("connect", onConnect);
     return () => {
       provider.removeListener("connect", onConnect);
