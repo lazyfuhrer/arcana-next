@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@arcana/auth": "^1.0.1",
+    "@livepeer/react": "^2.2.3",
     "@next/font": "13.1.6",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
